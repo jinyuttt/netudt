@@ -1,0 +1,10 @@
+E:\Study\vs\donetudt\netudt\netudt\bin\Debug\netstandard2.0\config\Log4Net.config
+E:\Study\vs\donetudt\netudt\netudt\bin\Debug\netstandard2.0\netudt.deps.json
+E:\Study\vs\donetudt\netudt\netudt\bin\Debug\netstandard2.0\netudt.dll
+E:\Study\vs\donetudt\netudt\netudt\bin\Debug\netstandard2.0\netudt.pdb
+E:\Study\vs\donetudt\netudt\netudt\obj\Debug\netstandard2.0\netudt.csprojAssemblyReference.cache
+E:\Study\vs\donetudt\netudt\netudt\obj\Debug\netstandard2.0\netudt.csproj.CoreCompileInputs.cache
+E:\Study\vs\donetudt\netudt\netudt\obj\Debug\netstandard2.0\netudt.AssemblyInfoInputs.cache
+E:\Study\vs\donetudt\netudt\netudt\obj\Debug\netstandard2.0\netudt.AssemblyInfo.cs
+E:\Study\vs\donetudt\netudt\netudt\obj\Debug\netstandard2.0\netudt.dll
+E:\Study\vs\donetudt\netudt\netudt\obj\Debug\netstandard2.0\netudt.pdb

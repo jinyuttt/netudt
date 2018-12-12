@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="util\Application.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="cc\SimpleTCP.cs" />
+    <None Include="ClientSession.cs" />
+    <None Include="CongestionControl.cs" />
+    <None Include="packets\Acknowledgement.cs" />
+    <None Include="packets\Acknowledgment2.cs" />
+    <None Include="packets\ConnectionHandshake.cs" />
+    <None Include="packets\ControlInformation.cs" />
+    <None Include="packets\ControlPacket.cs" />
+    <None Include="packets\DataPacket.cs" />
+    <None Include="packets\Destination.cs" />
+    <None Include="packets\KeepAlive.cs" />
+    <None Include="packets\MessageDropRequest.cs" />
+    <None Include="packets\NegativeAcknowledgement.cs" />
+    <None Include="packets\PacketFactory.cs" />
+    <None Include="packets\PacketUtil.cs" />
+    <None Include="packets\Shutdown.cs" />
+    <None Include="packets\UserDefined.cs" />
+    <None Include="receiver\AckHistoryEntry.cs" />
+    <None Include="receiver\AckHistoryWindow.cs" />
+    <None Include="receiver\PacketHistoryWindow.cs" />
+    <None Include="receiver\PacketPairWindow.cs" />
+    <None Include="receiver\ReceiverLossList.cs" />
+    <None Include="receiver\ReceiverLossListEntry.cs" />
+    <None Include="sender\SenderLossList.cs" />
+    <None Include="ServerSession.cs" />
+    <None Include="UDPEndPoint.cs" />
+    <None Include="UDTClient.cs" />
+    <None Include="UDTCongestionControl.cs" />
+    <None Include="UDTInputStream.cs" />
+    <None Include="UDTOutputStream.cs" />
+    <None Include="UDTPacket.cs" />
+    <None Include="UDTReceiver.cs" />
+    <None Include="UDTSender.cs" />
+    <None Include="UDTServerSocket.cs" />
+    <None Include="UDTSession.cs" />
+    <None Include="UDTSocket.cs" />
+    <None Include="unicore\FufexReceive.cs" />
+    <None Include="unicore\FufexSend.cs" />
+    <None Include="unicore\Application.cs" />
+    <None Include="util\CircularArray.cs" />
+    <None Include="util\MeanThroughput.cs" />
+    <None Include="util\MeanValue.cs" />
+    <None Include="util\ReceiveBuffer.cs" />
+    <None Include="util\ReceiveFile.cs" />
+    <None Include="util\SendFile.cs" />
+    <None Include="util\SequenceNumber.cs" />
+    <None Include="util\StatisticsHistoryEntry.cs" />
+    <None Include="util\Tools.cs" />
+    <None Include="util\UDTStatistics.cs" />
+    <None Include="util\UDTThreadFactory.cs" />
+    <None Include="util\Util.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="config\Log4Net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+E:\Study\vs\donetudt\netudt\ConsoleApp2\bin\Debug\netcoreapp2.1\config\Log4Net.config
+E:\Study\vs\donetudt\netudt\ConsoleApp2\bin\Debug\netcoreapp2.1\ConsoleApp2.deps.json
+E:\Study\vs\donetudt\netudt\ConsoleApp2\bin\Debug\netcoreapp2.1\ConsoleApp2.runtimeconfig.json
+E:\Study\vs\donetudt\netudt\ConsoleApp2\bin\Debug\netcoreapp2.1\ConsoleApp2.runtimeconfig.dev.json
+E:\Study\vs\donetudt\netudt\ConsoleApp2\bin\Debug\netcoreapp2.1\ConsoleApp2.dll
+E:\Study\vs\donetudt\netudt\ConsoleApp2\bin\Debug\netcoreapp2.1\ConsoleApp2.pdb
+E:\Study\vs\donetudt\netudt\ConsoleApp2\bin\Debug\netcoreapp2.1\netudt.dll
+E:\Study\vs\donetudt\netudt\ConsoleApp2\bin\Debug\netcoreapp2.1\netudt.pdb
+E:\Study\vs\donetudt\netudt\ConsoleApp2\obj\Debug\netcoreapp2.1\ConsoleApp2.csprojAssemblyReference.cache
+E:\Study\vs\donetudt\netudt\ConsoleApp2\obj\Debug\netcoreapp2.1\ConsoleApp2.csproj.CoreCompileInputs.cache
+E:\Study\vs\donetudt\netudt\ConsoleApp2\obj\Debug\netcoreapp2.1\ConsoleApp2.AssemblyInfoInputs.cache
+E:\Study\vs\donetudt\netudt\ConsoleApp2\obj\Debug\netcoreapp2.1\ConsoleApp2.AssemblyInfo.cs
+E:\Study\vs\donetudt\netudt\ConsoleApp2\obj\Debug\netcoreapp2.1\ConsoleApp2.csproj.CopyComplete
+E:\Study\vs\donetudt\netudt\ConsoleApp2\obj\Debug\netcoreapp2.1\ConsoleApp2.dll
+E:\Study\vs\donetudt\netudt\ConsoleApp2\obj\Debug\netcoreapp2.1\ConsoleApp2.pdb
