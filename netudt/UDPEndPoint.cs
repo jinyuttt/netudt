@@ -126,7 +126,7 @@ namespace netudt
          */
         public int LocalPort
         {
-            get { return port; }
+            get { if (port == 0) { port = (dgSocket.LocalEndPoint as IPEndPoint).Port; }; return port; }
         }
         /**
          * @return Gets the local address to which the socket is bound

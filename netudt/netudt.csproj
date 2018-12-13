@@ -12,6 +12,20 @@
     <None Include="cc\SimpleTCP.cs" />
     <None Include="ClientSession.cs" />
     <None Include="CongestionControl.cs" />
+    <None Include="judp\ApplicationCode.cs" />
+    <None Include="judp\DataStruct.cs" />
+    <None Include="judp\judpClient.cs" />
+    <None Include="judp\judpGroupSocket.cs" />
+    <None Include="judp\judpRecviceFile.cs" />
+    <None Include="judp\judpSendFile.cs" />
+    <None Include="judp\judpServer.cs" />
+    <None Include="judp\judpSocket.cs" />
+    <None Include="judp\judpSocketManager.cs" />
+    <None Include="judp\PackagetCombin.cs" />
+    <None Include="judp\PackagetSub.cs" />
+    <None Include="judp\SocketControls.cs" />
+    <None Include="judp\SocketManager.cs" />
+    <None Include="judp\SocketReference.cs" />
     <None Include="packets\Acknowledgement.cs" />
     <None Include="packets\Acknowledgment2.cs" />
     <None Include="packets\ConnectionHandshake.cs" />
@@ -70,6 +84,10 @@
     <None Update="config\Log4Net.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ss\" />
   </ItemGroup>
 
 </Project>

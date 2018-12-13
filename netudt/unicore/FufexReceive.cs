@@ -1,9 +1,4 @@
 
-
-
-
-
-
 using netudt.util;
 using System;
 using System.IO;
@@ -36,13 +31,13 @@ public class FufexReceive  {
 	}
 
 	
-	public void run(){
+	public void Run(){
 		try{
 			//open the UDPEndpoint
-			UDTClient client=new UDTClient();
+			  UDTClient client=new UDTClient();
                 int localPort = client.GetEndpoint().LocalPort;
 			//write the port to output
-			writeToOut("OUT: "+localPort);
+			  WriteToOut("OUT: "+localPort);
 			
 			//read peer port from input file or stdin
 			string peerPortS=ReadFromIn();
@@ -60,7 +55,7 @@ public class FufexReceive  {
 			//now read file data
 			FileStream fos=new FileStream(localFile,FileMode.Append);
 			try{
-				//Util.copy(inStream, fos, size, false);
+				Util.CopyFileReceiver(fos,inStream,size, false);
 			}finally{
 				fos.Close();
 			}
@@ -71,8 +66,8 @@ public class FufexReceive  {
 		}
 	}
 
-	public static void main(string[] args){
-		if(args.Length<3)usage();
+	public static void Main(string[] args){
+		if(args.Length<3)Usage();
 		
 		string serverIP=args[0];
 		string localFile=args[1];
@@ -84,11 +79,11 @@ public class FufexReceive  {
 			commIn=args[4];
 		}
 		FufexReceive fr=new FufexReceive(serverIP,localFile,append,commOut,commIn);
-		fr.run();
+		fr.Run();
 	}
 
 	//print usage info and exit with error
-	private static void usage(){
+	private static void Usage(){
 		Console.WriteLine("usage: recvfile server_ip local_filename mode [comm_out comm_in]");
 		 
 	}
@@ -114,12 +109,12 @@ public class FufexReceive  {
 	}
 	
 	
-	private void writeToOut(string line){
+	private void WriteToOut(string line){
 		if(commOut!=null){
-			appendToFile(commOut, line);
+			AppendToFile(commOut, line);
 		}
 		else{
-                Console.WriteLine(line);
+             Console.WriteLine(line);
 		}
 	}
 	
@@ -128,9 +123,8 @@ public class FufexReceive  {
 	 * @param name - the file to write to
 	 * @param line - the line to write
 	 */
-	private void appendToFile(string name, string line) {
-		FileInfo f=new FileInfo(name);
-            //FileStream fos=new FileStream(name,FileMode.Append);
+	private void AppendToFile(string name, string line)
+        { 
             using (StreamWriter sw = new StreamWriter(name, true))
             {
                 try {

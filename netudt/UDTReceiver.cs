@@ -69,15 +69,15 @@ public class UDTReceiver {
 	//to check the ACK, NAK, or EXP timer
 	private long nextACK;
 	//microseconds to next ACK event
-	private long ackTimerInterval=Util.getSYNTime();
+	private long ackTimerInterval=Util.GetSYNTime();
 
 	private long nextNAK;
 	//microseconds to next NAK event
-	private long nakTimerInterval=Util.getSYNTime();
+	private long nakTimerInterval=Util.GetSYNTime();
 
 	private long nextEXP;
 	//microseconds to next EXP event
-	private long expTimerInterval=100*Util.getSYNTime();
+	private long expTimerInterval=100*Util.GetSYNTime();
 
 	//instant when the session was created (for expiry checking)
 	private  long sessionUpSince;
@@ -208,7 +208,7 @@ public class UDTReceiver {
 		}
             //perform time-bounded UDP receive
             IUDTPacket packet = null;
-                handoffQueue.TryTake(out packet,(int)Util.getSYNTime());
+                handoffQueue.TryTake(out packet,(int)Util.GetSYNTime());
 		if(packet!=null){
 			//reset exp count to 1
 			expCount=1;
@@ -502,7 +502,7 @@ public class UDTReceiver {
 			if(roundTripTime>0)roundTripTime = (roundTripTime*7 + rtt)/8;
 			else roundTripTime = rtt;
 			roundTripTimeVar = (roundTripTimeVar* 3 + Math.Abs(roundTripTimeVar- rtt)) / 4;
-			ackTimerInterval=4*roundTripTime+roundTripTimeVar+Util.getSYNTime();
+			ackTimerInterval=4*roundTripTime+roundTripTimeVar+Util.GetSYNTime();
 			nakTimerInterval=ackTimerInterval;
 			statistics.setRTT(roundTripTime, roundTripTimeVar);
 		}

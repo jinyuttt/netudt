@@ -40,7 +40,7 @@ public class UDTSender {
 	private Thread senderThread;
 
 	//protects against races when reading/writing to the sendBuffer
-	private  Object sendLock=new Object();
+	private  object sendLock=new object();
 
 	//number of unacknowledged data packets
 	private  int unacknowledged=0;
@@ -206,8 +206,8 @@ public class UDTSender {
 	}
 
 	protected void OnAcknowledge(Acknowledgement acknowledgement){
-            waitForAckLatch.Wait();
-            waitForSeqAckLatch.Wait();
+            waitForAckLatch.Signal();
+            waitForSeqAckLatch.Signal();
             //cd 
             long ackNumber = acknowledgement.AckNumber;
 		// cd

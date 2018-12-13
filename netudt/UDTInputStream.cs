@@ -230,13 +230,13 @@ namespace netudt
 * 如果是写入为主，当读取速度慢时，数据覆盖丢失
 * 默认读取为主，还没有读取则不允许覆盖，丢掉数据，等待重复
 * islagerRead=true才有意义
-* @param isRead
+* 
 */
-        public void  ResetBufMaster(bool isRead)
-	 {
-		 receiveBuffer.ResetBufMaster(isRead);
-		
-	 }
+        public void ResetBufMaster(bool isRead)
+        {
+            receiveBuffer.ResetBufMaster(isRead);
+
+        }
 	 
 	 /**
 	  * 设置大数据读取

@@ -100,10 +100,12 @@ namespace netudt.Log
 
         }
 
-       /// <summary>
-       /// 读取配置
-       /// </summary>
-       /// <param name="node"></param>
+       
+
+        /// <summary>
+        /// 读取配置
+        /// </summary>
+        /// <param name="node"></param>
         private void FindXMLNode(XmlNode node)
         {
            XmlNodeList nodeList= node.SelectNodes("datepattern");

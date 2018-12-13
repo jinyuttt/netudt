@@ -150,14 +150,14 @@ namespace netudt
                         packetSendingPeriod = 1000000.0 / packetArrivalRate;
                     }
                     else {
-                        packetSendingPeriod = (double)congestionWindowSize / (roundTripTime + Util.getSYNTimeD());
+                        packetSendingPeriod = (double)congestionWindowSize / (roundTripTime + Util.GetSYNTimeD());
                     }
                 }
 
             } else {
                 //1.if it is  not in slow start phase,set the congestion window size 
                 //to the product of packet arrival rate and(rtt +SYN)
-                double A = packetArrivalRate / 1000000.0 * (roundTripTime + Util.getSYNTimeD());
+                double A = packetArrivalRate / 1000000.0 * (roundTripTime + Util.GetSYNTimeD());
                 //congestionWindowSize = (long)A + 16;
                 //if (logger.isLoggable(Level.FINER)) {
                 //    logger.finer("receive rate " + packetArrivalRate + " rtt " + roundTripTime + " set to window size: " + (A + 16));
@@ -177,7 +177,7 @@ namespace netudt
             double numOfIncreasingPacket = ComputeNumOfIncreasingPacket();
 
             //5. update the send period
-            double factor = Util.getSYNTimeD() / (packetSendingPeriod * numOfIncreasingPacket + Util.getSYNTimeD());
+            double factor = Util.GetSYNTimeD() / (packetSendingPeriod * numOfIncreasingPacket + Util.GetSYNTimeD());
             packetSendingPeriod = factor * packetSendingPeriod;
             //packetSendingPeriod=0.995*packetSendingPeriod;
 
@@ -215,7 +215,7 @@ namespace netudt
                     packetSendingPeriod = 100000.0 / packetArrivalRate;
                 }
                 else {
-                    packetSendingPeriod = congestionWindowSize / (roundTripTime + Util.getSYNTime());
+                    packetSendingPeriod = congestionWindowSize / (roundTripTime + Util.GetSYNTime());
                 }
                 slowStartPhase = false;
                 return;

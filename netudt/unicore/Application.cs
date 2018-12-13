@@ -12,7 +12,7 @@ namespace netudt.util
 
         protected static int localPort = -1;
 
-        public void configure() {
+        public virtual void Configure() {
             //if (verbose) {
             //    Logger.getLogger("udt").setLevel(Level.INFO);
             //}
@@ -22,11 +22,11 @@ namespace netudt.util
         }
 
 
-        protected static string[] parseOptions(string[] args) {
+        internal static string[] ParseOptions(string[] args) {
             List<string> newArgs = new List<string>();
             foreach (string  arg in args) {
                 if (arg.StartsWith("-")) {
-                    parseArg(arg);
+                    ParseArg(arg);
                 }
                 else
                 {
@@ -37,7 +37,7 @@ namespace netudt.util
         }
 
 
-        protected static void parseArg(string arg) {
+        internal static void ParseArg(string arg) {
             if ("-v".Equals(arg) || "--verbose".Equals(arg)) {
                 verbose = true;
                 return;
@@ -53,7 +53,7 @@ namespace netudt.util
 
 
 
-     internal   static long decode(byte[] data, int start) {
+     internal   static long Decode(byte[] data, int start) {
             long result = (data[start + 3] & 0xFF) << 24
                          | (data[start + 2] & 0xFF) << 16
                          | (data[start + 1] & 0xFF) << 8
@@ -61,7 +61,7 @@ namespace netudt.util
             return result;
         }
 
-      internal  static byte[] encode(long value) {
+      internal  static byte[] Encode(long value) {
             byte m4 = (byte)(value >> 24);
             byte m3 = (byte)(value >> 16);
             byte m2 = (byte)(value >> 8);
@@ -69,7 +69,7 @@ namespace netudt.util
             return new byte[] { m1, m2, m3, m4 };
         }
 
-      internal  static byte[] encode64(long value) {
+      internal  static byte[] Encode64(long value) {
             byte m4 = (byte)(value >> 24);
             byte m3 = (byte)(value >> 16);
             byte m2 = (byte)(value >> 8);
